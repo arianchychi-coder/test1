@@ -1,0 +1,313 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f4f4f4;
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 14px;
+  direction: rtl;
+  padding: 30px;
+}
+.container {
+  max-width: 960px;
+  margin: 2rem auto;
+}
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+.form-section {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 1rem;
+}
+.section-title {
+  font-weight: 600;
+  color: #37474f;
+  margin-bottom: 1rem;
+}
+.form-label,
+.form-check-label {
+  font-size: 13px;
+}
+.btn {
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary {
+  background-color: #1976d2;
+  color: white;
+}
+.btn-secondary {
+  background-color: #b0bec5;
+  color: #263238;
+}
+.is-invalid {
+  border-color: red;
+}
+/* --- آپلود تصاویر --- */
+.upload-form {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.upload-title {
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 18px;
+}
+.upload-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0; /* کاهش فاصله */
+  text-align: center;
+}
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.upload-box img {
+  width: 100%;
+  max-width: 140px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
+  background-color: #eee;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 8px;
+}
+.upload-box label {
+  display: inline-block;
+  background-color: #6200ee;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+.upload-box label:hover {
+  background-color: #4500b5;
+}
+.upload-box input[type="file"] {
+  display: none;
+}
+.upload-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+.upload-button button {
+  background-color: #03dac6;
+  color: black;
+  padding: 10px 60px;           /* کشیده‌تر از قبل */
+  border-radius: 12px;          /* گوشه‌های نرم‌تر */
+  font-weight: 500;
+  font-size: 13px;              /* فونت کمی ریزتر */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s;
+  border: none;
+  letter-spacing: 0.5px;
+}
+.upload-button button:hover {
+  background-color: #00bfa5;
+  transform: translateY(-1px);  /* افکت شناور */
+}
+.wide-btn {
+  width: 45%;       /* عرض دکمه‌ها حدود 45 درصد */
+  min-width: 140px; /* حداقل عرض برای دکمه‌ها */
+  padding: 10px 0;  /* ارتفاع دکمه بیشتر برای ظاهر بهتر */
+  font-size: 14px;  /* فونت کمی ریزتر */
+  border-radius: 8px;
+}
+/* فاصله سمت راست دکمه اول */
+.me-2 {
+  margin-right: 10px; /* فاصله بین دکمه‌ها */
+}
+/* واکنش‌گرایی برای موبایل */
+@media (max-width: 768px) { /* برای تبلت و موبایل */
+    body {
+        padding: 15px; /* کاهش پدینگ کلی در صفحه نمایش‌های کوچک‌تر */
+    }
+}
+
+@media (max-width: 480px) { /* برای گوشی‌های کوچک‌تر */
+    body {
+        padding: 10px; /* پدینگ کمتر برای گوشی‌های خیلی کوچک */
+    }
+}
+@media (max-width: 768px) { /* برای تبلت و موبایل */
+    .upload-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 ستون در تبلت و موبایل بزرگتر */
+        gap: 15px; /* افزایش فاصله برای خوانایی */
+    }
+}
+
+@media (max-width: 480px) { /* برای گوشی‌های کوچک‌تر */
+    .upload-grid {
+        grid-template-columns: 1fr; /* 1 ستون در گوشی‌های خیلی کوچک */
+        gap: 20px;
+    }
+    .upload-box img {
+        max-width: 180px; /* بزرگتر شدن تصویر در حالت تک ستونه */
+    }
+}
+.notification-card {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  padding: 25px 30px;
+  font-family: 'Vazirmatn', sans-serif;
+  color: #37474f;
+  line-height: 1.7;
+  font-size: 15px;
+}
+.notification-card h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #1976d2;
+  font-weight: 700;
+  font-size: 20px;
+}
+.notification-card p {
+  margin-bottom: 15px;
+}
+.important-text {
+  color: #d32f2f;
+  font-weight: 700;
+}
+.accordion-container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  margin-top: 1rem;
+}
+.accordion-header {
+  padding: 7px 7px;
+  font-size: 14px;    /* فونت کوچکتر */
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  height: 36px;      /* ارتفاع ظریف و کم */
+  background-color: #f9f9f9;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accordion-header:hover {
+  background-color: #f0f0f0;
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 16px;
+}
+.accordion-content.open {
+  padding: 16px;
+}
+.accordion-arrow {
+  transition: transform 0.3s ease;
+}
+.accordion-arrow.open {
+  transform: rotate(90deg);
+}
+#uploadForm {
+  min-height: 600px;  /* ارتفاع حداقل فرم */
+  padding-bottom: 60px; /* فاصله پایین‌تر برای پیام */
+  box-sizing: border-box;
+  position: relative; /* در صورت نیاز به موقعیت‌دهی */
+}
+.image-upload-container {
+  position: relative;
+  width: 120px;
+  height: 140px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  transition: border-color 0.3s ease;
+}
+.image-upload-container:hover {
+  border-color: #007bff;
+}
+.image-upload-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-upload-container .hint {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  font-size: 0.75rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  color: #333;
+  padding: 2px 4px;
+}
+#studentPortraitInput {
+  display: none;
+}
+.upload-guidelines {
+  font-size: 0.85rem;
+  color: #555;
+  background: #f0f0f0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+.upload-guidelines i {
+  color: #007bff;
+  margin-left: 5px;
+}
+.material-info-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.7;
+}
+.material-info-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #1e88e5;
+  font-weight: 600;
+}
+.material-info-card .highlight {
+  background-color: #e3f2fd;
+  color: #1565c0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.material-info-card strong {
+  color: #d32f2f;
+}
+.is-invalid {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 0.1rem rgba(220, 53, 69, 0.25);
+}
+.text-success {
+    color: green;
+    margin-right: 10px;
+}

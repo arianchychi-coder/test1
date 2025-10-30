@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+   <head>
+      <meta charset="UTF-8" />
+      <title>فرم ثبت‌نام اولیه هنرجو</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+      <meta http-equiv="Pragma" content="no-cache" />
+      <meta http-equiv="Expires" content="0" />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" href="/style.css">
+   </head>
+   <body>
+      <div class="container">
+         <div class="card">
+            <div class="d-flex align-items-start gap-3 p-3 border rounded shadow-sm bg-light" style="max-width: 300px;">
+               <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="کاربر" width="50" height="50" style="border-radius:50%;" />
+               <div>
+                  <div id="userInfo" style="font-weight: 600; font-size: 15px; color: #37474f;">
+                     در حال بارگذاری...
+                  </div>
+                  <button onclick="location.href='/api/dashboard/1/index'" class="btn btn-link mt-1 p-0 d-flex align-items-center gap-1 text-danger" style="font-size: 14px; text-decoration: none;">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M10 12a.5.5 0 0 1 .5.5v-1a.5.5 0 0 1-.5.5H3.707l1.147-1.146a.5.5 0 0 1-.708-.708l-2 2a.5.5 0 0 1 0 .708l2 2a.5.5 0 0 1 .708-.708L3.707 13H10z"/>
+                        <path fill-rule="evenodd" d="M13.5 3h-6A1.5 1.5 0 0 0 6 4.5v7A1.5 1.5 0 0 0 7.5 13h6A1.5 1.5 0 0 0 15 11.5v-7A1.5 1.5 0 0 0 13.5 3zM13 11H8V5h5v6z"/>
+                     </svg>
+                     بازگشت به صفحه قبل    
+                  </button>
+               </div>
+            </div>
+            <div class="container-sm">
+               <!-- ثبت چهره -->
+               <h4 class="text-center mt-4">فرم ثبت‌ نام اولیه هنرجو</h4>
+               <form action="" id="registrationForm" method="post" novalidate>
+                  <div class="form-section">
+                     <div class="section-title">اطلاعات هویتی</div>
+                     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn-font@v33.003/Vazirmatn-font-face.css" rel="stylesheet" />
+<div style="
+  font-family: 'Vazirmatn', sans-serif;
+  font-size: 0.85rem;
+  color: #374151;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  line-height: 1.9;
+  max-width: 680px;
+  margin-bottom: 20px;
+">
+  <h3 style="margin-top: 0; font-size: 0.95rem; color: #111827;">توجه مهم</h3>
+
+  <p style="margin: 0.5rem 0;">
+    تکمیل <strong>تمامی فیلدهای شماره موبایل</strong> الزامی است.
+  </p>
+
+  <p style="margin: 0.5rem 0;">
+    شماره <strong style="color: #2563eb;">موبایل هنرجو</strong> باید <strong style="color: #dc2626;">منحصربه‌فرد</strong> و فقط متعلق به خود او باشد. استفاده از شماره دیگران برای این فیلد مجاز نیست.
+  </p>
+
+  <p style="margin: 0.5rem 0;">
+    برای فیلدهای دیگر (مانند والدین یا اقوام)، <strong>تکرار شماره</strong> مجاز است اما باید با <strong>دقت و صحت</strong> وارد شود. در صورت نداشتن شماره معتبر، می‌توانید از شماره سایر اعضای خانواده استفاده کنید.
+  </p>
+
+  <div style="
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 0.5rem;
+    color: #b91c1c;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9rem;
+  ">
+    ⚠️ تا زمانی که اطلاعات به‌درستی و کامل وارد نشده باشند، دکمه ثبت اطلاعات غیرفعال خواهد بود.
+  </div>
+</div>
+
+
+                     <div class="row g-2">
+                        <div class="mb-3" style="font-family: 'Vazirmatn', sans-serif; font-size: 0.9rem; color: #334155; background-color: #f0f9ff; border: 1px solid #bae6fd; border-radius: 0.5rem; padding: 0.75rem 1rem; margin-bottom: 1rem;">
+                           <strong>ثبت دسته‌جمعی هنرجویان با فایل Excel:</strong><br>
+                           در صورت تمایل به وارد کردن همزمان چندین هنرجو، لطفاً فایل Excel حاوی اطلاعات کامل را در بخش مربوطه بارگذاری نمایید. 
+                           اطلاعات وارد شده در فرم دستی، فقط برای ثبت یک هنرجو کاربرد دارد.<br>
+                           جهت بارگذاری گروهی اطلاعات و مشاهده وضعیت هنرجویان، لطفاً به <a href="/student/list" style="color: #0ea5e9; text-decoration: underline;">صفحه لیست هنرجویان</a> مراجعه فرمایید.
+                        </div>
+                        <div class="col-md-3">
+                           <label class="form-label">نام:<span style="color:red">*</span></label>
+                           <input type="text" class="form-control form-control-sm required"  name="first_name" required/>
+                        </div>
+                        <div class="col-md-3">
+                           <label class="form-label">نام خانوادگی:<span style="color:red">*</span></label>
+                           <input type="text" class="form-control form-control-sm required" name="last_name" required/>
+                        </div>
+                        <div class="col-md-3">
+                           <label class="form-label">نام پدر:<span style="color:red">*</span></label>
+                           <input type="text" class="form-control form-control-sm required" name="father_name" required/>
+                        </div>
+                        <div class="col-md-3">
+                           <label class="form-label">نام مادر:<span style="color:red">*</span></label>
+                           <input type="text" class="form-control form-control-sm required" name="mother_name" required/>
+                        </div>
+                        <div class="col-md-3">
+                           <label class="form-label">کد ملی:<span style="color:red">*</span></label>
+                           <input type="text" id="nationalCode" name="national_code" placeholder="کد ملی" class="form-control form-control-sm required" required/>
+                           <div id="nationalCodeError" style="color: red; display: none;"></div>
+                           <div id="nationalCodeSuccess" style="color: green; display: none;"></div>
+                        </div>
+                        <div class="col-md-3">
+                           <label class="form-label">محل صدور شناسنامه:</label>
+                           <input 
+                              type="text" 
+                              class="form-control form-control-sm" 
+                              id="birthPlace" 
+                              name="birth_certificate_place"
+                              placeholder="محل صدور"
+                               value="تهران" 
+                              required
+                              />
+                        </div>
+                        <div class="col-md-3">
+                           <label class="form-label"> شماره شناسنامه:<span style="color:red">*</span></label>
+                           <input type="text" class="form-control form-control-sm required" name="birth_certificate_number" required/>
+                        </div>
+                        <div class="col-md-3">
+                           <label class="form-label">تاریخ تولد:<span style="color:red">*</span></label>
+                           <input 
+                              type="text"
+                              id="birthDatePicker"
+                              name="birth_date"
+                              class="form-control form-control-sm required"
+                              placeholder="مثال: 1385/05/23"
+                              autocomplete="off"
+                              required
+                              />
+                        </div>
+                        <div class="col-md-3">
+                           <label class="form-label">سال تحصیلی:<span style="color:red">*</span></label>
+                           <select class="form-control form-control-sm required" name="academic_year" required>
+                              <option value="1404" selected>1404</option>
+                              <option value="1405">1405</option>
+                              <option value="1406">1406</option>
+                              <option value="1407">1407</option>
+                              <option value="1408">1408</option>
+                              <option value="1409">1409</option>
+                              <option value="1410">1410</option>
+                              <option value="1411">1411</option>
+                              <option value="1412">1412</option>
+                              <option value="1413">1413</option>
+                           </select>
+                        </div>
+                        <div class="col-md-3">
+                           <label class="form-label">مقطع تحصیلی:<span style="color:red">*</span></label>
+                           <select class="form-control form-control-sm required" name="education_level" required>
+                              <option value="">انتخاب کنید</option>
+                              <option value="10">دهم شبکه‌های کامپیوتری</option>
+                              <option value="11">یازدهم شبکه‌های کامپیوتری</option>
+                              <option value="12">دوازدهم شبکه‌های کامپیوتری</option>
+                           </select>
+                        </div>
+<div class="col-md-3">
+  <label class="form-label">
+    شماره تماس هنرجو:<span style="color:red">*</span>
+  </label>
+  <input 
+    type="text" 
+    class="form-control form-control-sm required mobile-field" 
+    id="studentMobile" 
+    placeholder="مثال: 09123456789" 
+    pattern="09[0-9]{9}" 
+    maxlength="11"
+    title="شماره موبایل باید با 09 شروع شده و 11 رقم باشد" 
+    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+    name="student_phone" required/>
+    
+  <small id="studentMobileError" class="text-danger" style="display:none;"></small>
+  <small id="studentMobileSuccess" class="text-success" style="display:none;"></small>
+</div>
+
+<div class="col-md-3">
+  <label class="form-label">شماره تماس پدر:<span style="color:red">*</span></label>
+  <input 
+    type="text" 
+    class="form-control form-control-sm required mobile-field" 
+    id="fatherMobile" 
+    placeholder="مثال: 09123456789"
+    pattern="09[0-9]{9}" 
+    maxlength="11" 
+    title="شماره موبایل باید با 09 شروع شده و 11 رقم باشد" 
+    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+    name="father_phone"  
+    required
+  />
+  <small id="fatherMobileError" class="text-danger" style="display:none;"></small>
+</div>
+
+                        <div class="col-md-3">
+                           <label class="form-label"> شغل پدر:<span style="color:red">*</span></label>
+                           <input type="text" class="form-control form-control-sm required"  name="father_job" required/>
+                        </div>
+<div class="col-md-3">
+  <label class="form-label">شماره تماس مادر:<span style="color:red">*</span></label>
+  <input 
+    type="text" 
+    class="form-control form-control-sm required mobile-field" 
+    id="motherMobile" 
+    placeholder="مثال: 09123456789"
+    pattern="09[0-9]{9}" 
+    maxlength="11" 
+    required 
+    title="شماره موبایل باید با 09 شروع شده و 11 رقم باشد" 
+    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+    name="mother_phone"  
+    required
+  />
+  <small id="motherMobileError" class="text-danger" style="display:none;"></small>
+</div>
+
+<div class="col-md-3">
+  <label class="form-label">شماره تماس اضطراری:<span style="color:red">*</span></label>
+  <input 
+    type="text" 
+    class="form-control form-control-sm required mobile-field" 
+    id="emergencyPhone" 
+    name="emergency_phone" 
+    placeholder="مثال: 09123456789"
+    pattern="09[0-9]{9}" 
+    maxlength="11" 
+    required
+    title="شماره موبایل باید با 09 شروع شده و 11 رقم باشد" 
+    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+  />
+  <small id="emergencyPhoneError" class="text-danger" style="display:none;"></small>
+</div>
+
+                        <div class="col-md-3">
+                           <label class="form-label">شغل مادر :<span style="color:red">*</span></label>
+                           <input type="text" class="form-control form-control-sm required" name="mother_job" required/>
+                        </div>
+                        <div class="col-md-3">
+                           <label class="form-label">وضعیت تاهل پدر و مادر:<span style="color:red">*</span></label>
+                           <select class="form-select form-select-sm required" name="marital_status" required>
+    <option value="" selected disabled>انتخاب کنید</option>
+    <option value="single">مجرد</option>
+    <option value="married">متأهل</option>
+    <option value="divorced">طلاق گرفته</option>
+    <option value="widowed">بیوه</option>
+</select>
+
+                        </div>
+                        <div class="col-md-3">
+                           <label class="form-label">نام ولی قانونی :<span style="color:red">*</span></label>
+                           <input type="text" class="form-control form-control-sm required"  name="guardian_name" required/>
+                        </div>
+                        <div class="col-md-3">
+                           <label class="form-label"> نسبت ولی قانوی باهنرجو:<span style="color:red">*</span></label>
+                           <input type="text" class="form-control form-control-sm required" name="guardian_relation" required/>
+                        </div>
+<div class="col-md-3">
+  <label class="form-label">شماره تماس ولی قانونی:<span style="color:red">*</span></label>
+<div class="input-with-icon" style="position: relative;">
+  <input 
+    type="text" 
+    class="form-control form-control-sm required mobile-field" 
+    id="legalGuardianPhone" 
+    name="guardian_phone" 
+    placeholder="مثال: 09123456789" 
+    pattern="09[0-9]{9}" 
+    maxlength="11"
+    required
+    title="شماره موبایل باید با 09 شروع شده و 11 رقم باشد"
+    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+    style="padding-left: 30px;"
+  />
+  <span id="legalGuardianPhoneSuccess" style="
+    color: green; 
+    font-weight: bold; 
+    position: absolute; 
+    left: 10px;  /* کنار چپ */
+    top: 50%; 
+    transform: translateY(-50%);
+    display: none;
+    pointer-events: none;
+  ">✔️</span>
+</div>
+
+  <small id="legalGuardianPhoneError" class="text-danger" style="display:none;"></small>
+</div>
+
+
+
+                        <div class="col-md-3">
+                           <label class="form-label">نام مدرسه قبلی:<span style="color:red">*</span></label>
+                           <input type="text" class="form-control form-control-sm required"  name="previous_school_name" required/>
+                        </div>
+                        <div class="col-md-9">
+                           <label class="form-label">آدرس  منزل:<span style="color:red">*</span></label>
+                           <input type="text" class="form-control form-control-sm required" name="home_address" required/>
+                        </div>
+                        <div class="col-md-3">
+                           <label class="form-label">وضعیت سکونت:<span style="color:red">*</span></label>
+                           <select class="form-select form-select-sm required" id="residenceStatus" name="residence_status" required>
+                              <option value="" selected disabled>انتخاب کنید</option>
+                              <option value="مالک">مالک</option>
+                              <option value="مستاجر">مستاجر</option>
+                              <option value="سایر">سایر</option>
+                           </select>
+                        </div>
+                        <div class="col-md-3">
+                           <label class="form-label"> کد پستی:<span style="color:red">*</span></label>
+                           <input type="text" class="form-control form-control-sm required" name="postal_code" required/>
+                        </div>
+<div class="col-md-3">
+  <label class="form-label">
+    شماره تلفن ثابت (همراه با پیش‌شماره):<span style="color:red">*</span>
+  </label>
+  <input 
+    type="text" 
+    class="form-control form-control-sm" 
+    id="landline" 
+    placeholder="مثال: 02112345678 یا 02634567890" 
+    required 
+    title="شماره تلفن باید با 0 شروع شده، پیش‌شماره معتبر داشته و در مجموع بین 10 تا 12 رقم باشد."
+    name="home_phone"
+    required
+    pattern="0[0-9]{9,11}"
+  />
+  <small id="provinceName" style="display:block; margin-top:5px; font-weight:bold;"></small>
+  <div id="landlineError" style="color: red; display: none;"></div>
+  <div id="landlineSuccess" style="color: green; display: none;"></div>
+</div>
+
+                        <div class="mb-3 text-center">
+                           <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn-font@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+                           <div style="
+                              font-family: 'Vazirmatn', sans-serif;
+                              font-size: 0.85rem;
+                              color: #333;
+                              background-color: #f9fafb;
+                              border: 1px solid #d0d7de;
+                              border-radius: 0.5rem;
+                              padding: 1rem 1.25rem;
+                              line-height: 1.9;
+                              max-width: 700px;
+                              margin: 0 auto 1rem;
+                              box-shadow: 0 1px 2px rgba(0,0,0,0.04);">
+                              <strong style="color: #2563eb;">تکمیل این بخش الزامی است.</strong><br>
+                              لطفاً <u>چهار تصویر پرتره از هنرجو</u> را در زوایای مشخص‌شده (روبرو، چپ، راست و پشت) بارگذاری نمایید. این تصاویر به منظور
+                              <strong>پردازش و تحلیل چهره</strong>، ثبت هویت تصویری هنرجو و استفاده در فرآیندهای
+                              <strong>کنترل تردد و تشخیص چهره</strong> مورد استفاده قرار خواهند گرفت.<br>
+                              لطفاً اطمینان حاصل نمایید که تصاویر با کیفیت، با نور مناسب و پس‌زمینه‌ی ساده تهیه شده باشند.
+                           </div>
+                           <label class="form-label d-block mt-2">تصویر هنرجو <span class="text-danger">*</span></label>
+                           <div style="position: relative; display: inline-block;">
+                              <label for="studentPortraitInput" class="image-upload-container" style="
+                                 display: block;
+                                 width: 150px;
+                                 height: 150px;
+                                 border: 1px solid #ccc;
+                                 border-radius: 0.5rem;
+                                 overflow: hidden;
+                                 background-color: #f1f1f1;
+                                 position: relative;
+                                 cursor: pointer;">
+                              <img id="studentPortraitPreview" src="images/default-avatar-icon-of-social-media-user-vector.png" alt="پیش‌نمایش تصویر" style="
+                                 width: 100%;
+                                 height: 100%;
+                                 object-fit: cover;
+                                 object-position: center;
+                                 display: block;" />
+                              </label>
+                              <button id="removePortraitBtn" type="button" title="حذف تصویر" style="
+                                 position: absolute;
+                                 top: -8px;
+                                 right: -8px;
+                                 background: #ef4444;
+                                 color: white;
+                                 border: none;
+                                 border-radius: 50%;
+                                 width: 24px;
+                                 height: 24px;
+                                 font-weight: bold;
+                                 cursor: pointer;
+                                 display: none;
+                                 z-index: 2;">×</button>
+                           </div>
+                           <div class="hint text-muted small mt-1">برای انتخاب، روی تصویر کلیک کنید</div>
+                           <input 
+                              type="file" 
+                              id="studentPortraitInput" 
+                              name="student_portrait_front" 
+                              accept="image/*" 
+                              required 
+                              style="display: none;" />
+                           <div class="form-text mt-1">تصویر باید با کیفیت و فاقد اشکال تصویری باشد.</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="form-section">
+                     <div class="section-title">مشاهدات مدیر</div>
+                     <div class="d-flex flex-wrap gap-3 mb-3">
+                        <label class="form-check d-flex align-items-center gap-1 m-0">
+                        <input class="form-check-input" type="checkbox" id="appearance" name="appearance_neat"/>
+                        <span class="form-check-label">پوشش منظم و مناسب</span>
+                        </label>
+                        <label class="form-check d-flex align-items-center gap-1 m-0">
+                        <input class="form-check-input" type="checkbox" id="behavior" name="polite_behavior"/>
+                        <span class="form-check-label">رفتار مؤدب و اجتماعی</span>
+                        </label>
+                        <label class="form-check d-flex align-items-center gap-1 m-0">
+                        <input class="form-check-input" type="checkbox" id="family_involvement" name="family_involvement"/>
+                        <span class="form-check-label">والدین همراه و فعال</span>
+                        </label>
+                     </div>
+                     <div class="mt-2">
+                        <label for="studentGoal" class="form-label">
+                        هدف هنرجو از انتخاب رشته:<span style="color:red">*</span>
+                        </label>
+                        <select class="form-select required" id="studentGoal" name="student_goal">
+                           <option value="" selected disabled>انتخاب کنید...</option>
+                           <option value="علاقه و عشق به رشته">علاقه و عشق به این رشته</option>
+                           <option value="بازار کار مناسب">بازار کار مناسب</option>
+                           <option value="آینده شغلی تضمین‌شده">آینده شغلی تضمین‌شده</option>
+                           <option value="تمایل خانواده">تمایل خانواده</option>
+                           <option value="امکان ادامه تحصیل">امکان ادامه تحصیل</option>
+                           <option value="تناسب با توانایی‌های فردی">تناسب با توانایی‌های فردی</option>
+                           <option value="سایر">سایر</option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="form-section">
+                     <div class="section-title">وضعیت تحصیلی</div>
+                     <div class="d-flex align-items-center gap-2 mb-3">
+                        <label for="gradeInt" class="form-label mb-0">آخرین معدل (اختیاری):</label>
+                        <input
+                           type="number"
+                           class="form-control form-control-sm"
+                           style="width: 80px;"
+                           id="gradeDec"
+                           name="grade_dec"
+                           placeholder="25"
+                           min="0"
+                           max="99"
+                           step="1"
+                           />
+                        <span>.</span>
+                        <input
+                           type="number"
+                           class="form-control form-control-sm"
+                           style="width: 80px;"
+                           id="gradeInt"
+                           name="grade_int"
+                           placeholder="مثلاً 17"
+                           min="0"
+                           max="20"
+                           step="1"
+                           />
+                     </div>
+                     <div class="d-flex flex-wrap gap-3">
+                        <label class="form-check d-flex align-items-center gap-1 m-0">
+                        <input class="form-check-input" type="radio" name="academicStatus" id="high" />
+                        <span class="form-check-label">آمادگی بالا</span>
+                        </label>
+                        <label class="form-check d-flex align-items-center gap-1 m-0">
+                        <input class="form-check-input" type="radio" name="academicStatus" id="medium" />
+                        <span class="form-check-label">نیاز به حمایت متوسط</span>
+                        </label>
+                        <label class="form-check d-flex align-items-center gap-1 m-0">
+                        <input class="form-check-input" type="radio" name="academicStatus" id="low" />
+                        <span class="form-check-label">نیاز به پیگیری ویژه</span>
+                        </label>
+                     </div>
+                  </div>
+                  <div class="form-section">
+                     <div class="section-title">تعهدات اولیه</div>
+                     <div class="d-flex flex-wrap gap-3">
+                        <label class="form-check d-flex align-items-center gap-1 m-0">
+                        <input class="form-check-input" type="checkbox" id="discipline" name="commitment_discipline" />
+                        <span class="form-check-label">متعهد به رعایت انضباط</span>
+                        </label>
+                        <label class="form-check d-flex align-items-center gap-1 m-0">
+                        <input class="form-check-input" type="checkbox" id="rules" name="commitment_rules" />
+                        <span class="form-check-label">آگاه از قوانین پوشش و رفتار</span>
+                        </label>
+                     </div>
+                  </div>
+                  <div class="form-section">
+                     <div class="section-title">نتیجه ارزیابی<span style="color:red">*</span></div>
+                     <div class="d-flex flex-wrap gap-3">
+                        <label class="form-check d-flex align-items-center gap-1 m-0">
+                        <input class="form-check-input required-radio" type="radio" id="accepted" name="evaluation_result" value="accepted" />
+                        <span class="form-check-label">مورد قبول هستند</span>
+                        </label>
+                        <label class="form-check d-flex align-items-center gap-1 m-0">
+                        <input class="form-check-input required-radio" type="radio" id="notAccepted" name="evaluation_result" value="notAccepted" />
+                        <span class="form-check-label">مورد قبول نیستند</span>
+                        </label>
+                     </div>
+                  </div>
+                  <div class="text-center">
+                     <button type="submit" id="submitBtn" class="btn btn-primary me-2 wide-btn" >ثبت</button>
+                     <button type="reset" class="btn btn-secondary wide-btn" onclick="return confirm('آیا از حذف اطلاعات اطمینان دارید؟')">حذف اطلاعات</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      <!-- اعتبارسنجی و بررسی کد ملی (Validation and Availability Check) 
+      <script src="./Student_registration_scripts/checkNationalCode.js"></script>-->
+      <!-- پر کردن خودکار محل تولد بر اساس پیش شماره کد ملی 
+      <script src="./Student_registration_scripts/autoBirthPlaceByCode.js"></script> -->
+      <!-- اعتبارسنجی شماره موبایل‌ها (Mobile Validation) 
+      <script src="./Student_registration_scripts/mobileValidation.js"></script> -->
+      <!-- کنترل دکمه ارسال و اعتبارسنجی کلی فرم 
+      <script src="./Student_registration_scripts/formBasicValidation.js"></script> -->
+      <!-- اعتبارسنجی نمره (درجه) 
+      <script src="./Student_registration_scripts/gradeInputValidator.js"></script> -->
+      <!-- پیش نمایش عکس پرتره 
+      <script src="./Student_registration_scripts/portraitPreviewHandler.js"></script> -->
+      <!-- ارسال فرم با استفاده از Fetch API 
+      <script src="./Student_registration_scripts/formSubmission.js"></script>  -->
+      <!-- اعتبارسنجی و بررسی شماره تلفن ثابت (Landline Check)  
+      <script src="./Student_registration_scripts/phoneDuplicateCheck.js"></script> -->
+      <script src="/js/sumbit.js"></script>
+   </body>
+</html>

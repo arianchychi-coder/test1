@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>چت‌بات ساده</title>
+  <style>
+    body { font-family: sans-serif; background: #f3f3f3; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    #chatbox { width: 400px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px #ccc; padding: 15px; }
+    #messages { height: 300px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
+    .user { text-align: left; color: #0066cc; margin: 5px 0; direction: ltr;}
+    .bot {
+  text-align: right;
+  color: #333;
+  margin: 5px 0;
+  direction: rtl;
+}
+
+    input { width: calc(100% - 80px); padding: 8px; border: 1px solid #aaa; border-radius: 5px; }
+    button { width: 60px; padding: 8px; background: #0066cc; color: white; border: none; border-radius: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div id="chatbox" style="text-align: center;">
+      <h3>به هوش مصنوعی مدرسه انفورماتیک خوش امدید</h3>
+    <div id="messages"></div>
+    <div>
+      <input id="input" type="text" placeholder="پیامت رو بنویس..." />
+      <button id="send" style="margin-top: 20px;">ارسال</button>
+    </div>
+  </div>
+
+  <script src="/js/chatbot.js"></script>
+</body>
+</html>
